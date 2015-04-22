@@ -1,4 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 *.ipr
 *.iws
+*.iml
+.idea
+cache
 fig.yml.sample
+ubuntu/web/releases
