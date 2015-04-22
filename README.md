@@ -1,14 +1,27 @@
 dhis2-docker
 ==============
 
+This document describes the requirement allowing to easily run [dhis2](https://www.dhis2.org/) using [docker](https://www.docker.com/) containers.
+
+Prerequisites
+-------------
+
+* [install Fig](http://www.fig.sh/install.html "Documentation") 
+
+
 How to have dhis2 running in one command?
 --------------
 
-simply run:
+Start a terminal, then run:
 
-    $fig up
+```
+git clone git://github.com/pgracio/dhis2-docker.git
+cd dhis2-docker
+fig up
+```
 
-Well, but first you need to [install Fig](http://www.fig.sh/install.html "Documentation")
+Once the container is up, open url http://127.0.0.1:8080 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
+
 
 Docker images
 --------------
