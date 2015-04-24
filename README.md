@@ -6,7 +6,8 @@ This document describes the requirement allowing to easily run [dhis2](https://w
 Prerequisites
 -------------
 
-* [install Fig](http://www.fig.sh/install.html "Documentation") 
+* [Install Docker on Mac OS X ](https://docs.docker.com/installation/mac/ "Install Docker on Mac OS")
+* [Install Fig](http://www.fig.sh/install.html "Documentation") 
 
 
 How to have dhis2 running in one command?
