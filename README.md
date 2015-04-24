@@ -6,7 +6,6 @@ This document describes the requirement allowing to easily run [dhis2](https://w
 Prerequisites
 -------------
 
-* [Install Docker on Mac OS X ](https://docs.docker.com/installation/mac/ "Install Docker on Mac OS")
 * [Install Fig](http://www.fig.sh/install.html "Documentation") 
 
 
