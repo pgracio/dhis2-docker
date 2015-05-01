@@ -22,6 +22,7 @@ fig up
 
 Once the container is up, open url http://127.0.0.1:8080 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
 
+When running on Mac OS X or Windows pointing to localhost will fail. It fails because de Docker Host address is not the localhost but instead the address of boot2docker VM. Run `$ boot2docker ip` to get Docker Host address. 
 
 Docker images
 --------------
