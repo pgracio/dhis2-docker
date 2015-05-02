@@ -19,16 +19,14 @@ RUN echo dhis:eRjht6wR | /usr/sbin/chpasswd
 # 8.2.6. Database configuration
 COPY conf/hibernate.properties /opt/dhis2/config/hibernate.properties
 
-# NOT WORKING YET
-#RUN echo "hibernate.connection.url = jdbc:postgresql://"$DHIS2_DB_PORT_5432_TCP_ADDR":"$DHIS2_DB_PORT_5432_TCP_PORT"/dhis" >> /opt/dhis2/config/hibernate.properties
-
 # 8.2.7. Install Java
-RUN apt-get update && apt-get install -y openjdk-7-jdk tomcat7-user curl postgresql-client
+# and other required stuff
+RUN apt-get install -y software-properties-common && add-apt-repository ppa:webupd8team/java -y && apt-get update && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections && apt-get install -y oracle-java8-set-default && apt-get install -y tomcat7-user curl postgresql-client
 
 # 8.2.8. Install Tomcat and DHIS2
 RUN cd /opt/dhis2/ && tomcat7-instance-create tomcat7 && chmod +x /opt/dhis2/tomcat7/bin/*.sh
 
-RUN echo "export JAVA_HOME='/usr/lib/jvm/java-7-openjdk-amd64'\nexport JAVA_OPTS='-Xmx7500m -Xms4000m -XX:MaxPermSize=500m -XX:PermSize=300m'\nexport DHIS2_HOME='/opt/dhis2/config'" >> /opt/dhis2/tomcat7/bin/setenv.sh
+RUN echo "export JAVA_OPTS=$JAVA_OPTS\nexport DHIS2_HOME='/opt/dhis2/config'" >> /opt/dhis2/tomcat7/bin/setenv.sh
 
 # download the DHIS 2 WAR file and place it into the webapps directory of Tomcat
 #ADD https://www.dhis2.org/download/releases/2.18/dhis.war /opt/dhis2/tomcat7/webapps/ROOT.war
