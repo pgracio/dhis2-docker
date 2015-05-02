@@ -42,7 +42,7 @@ Tutum supports several providers:
 * [Microsoft Azure]()
 * [SoftLayer](http://www.softlayer.com/)
 
-For testing porpouses I'm using AWS Free Tier. All you have to do is
+For testing purposes I'm using AWS Free Tier. All you have to do is
 
 1. [Create AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
 2. [Create Tutum Account](https://dashboard.tutum.co/accounts/register/)
