@@ -1,0 +1,18 @@
+database:
+  image: 'postgres:9.4'
+  environment:
+    - PG_DATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_DB=dhis
+    - POSTGRES_PASSWORD=dhis
+    - POSTGRES_USER=dhis
+  volumes:
+    - '/opt/dhis2/database:/var/lib/postgresql/data'
+web:
+  image: 'pgracio/dhis2-web:latest'
+  deployment_strategy: high_availability
+  environment:
+    - 'JAVA_OPTS=-Xmx1024m -Xms4000m -XX:MaxPermSize=500m -XX:PermSize=300m -XX:-UseGCOverheadLimit'
+  links:
+    - database
+  ports:
+    - '8080'

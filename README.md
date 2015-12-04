@@ -51,19 +51,27 @@ For testing purposes I'm using AWS Free Tier. All you have to do is
 5. [Create and deploy stack](https://support.tutum.co/support/solutions/articles/5000569899-stacks) using the following Stack file
 
 ```
-db:
-  image: 'pgracio/dhis2-db:latest'
+database:
+  image: 'postgres:9.4'
+  environment:
+    - PG_DATA=/var/lib/postgresql/data/pgdata
+    - POSTGRES_DB=dhis
+    - POSTGRES_PASSWORD=dhis
+    - POSTGRES_USER=dhis
+  volumes:
+    - '/opt/dhis2/database:/var/lib/postgresql/data'
 web:
   image: 'pgracio/dhis2-web:latest'
+  deployment_strategy: high_availability
   environment:
-    - 'JAVA_OPTS=[u''-Xmx1024m -Xms4000m -XX:MaxPermSize=500m -XX:PermSize=300m -XX:-UseGCOverheadLimit'']'
+    - 'JAVA_OPTS=-Xmx1024m -Xms4000m -XX:MaxPermSize=500m -XX:PermSize=300m -XX:-UseGCOverheadLimit'
   links:
-    - db
+    - database
   ports:
-    - '8080:8080'
+    - '8080'
 ```
 
-[Demo should be available, have fun :)](http://web.dhis2.pgracio.svc.tutum.io:8080/)
+[Demo should be available, have fun :)](http://haproxy-af009260.pgracio.svc.tutum.io/)
 
 Bugs, new requests or contribution
 --------------
