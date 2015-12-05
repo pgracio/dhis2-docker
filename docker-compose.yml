@@ -1,7 +1,7 @@
 database:
   #image: postgres:9.4
-  image: pgracio/dhis2-db:2.20-sierra-leone
-  #image: pgracio/dhis2-db:2.21-sierra-leone
+  #image: pgracio/dhis2-db:2.20-sierra-leone
+  image: pgracio/dhis2-db:2.21-sierra-leone
   environment:
     POSTGRES_USER: dhis
     POSTGRES_DB: dhis
@@ -9,13 +9,13 @@ database:
     PG_DATA: /var/lib/postgresql/data/pgdata
   volumes:
     #-  dhis-2.21-volume:/var/lib/postgresql/data
-    -  dhis-2.20-sierra-leone-volume:/var/lib/postgresql/data
-    #-  dhis-2.21-sierra-leone-volume:/var/lib/postgresql/data
+    #-  dhis-2.20-sierra-leone-volume:/var/lib/postgresql/data
+    -  dhis-2.21-sierra-leone-volume:/var/lib/postgresql/data
   ports:
     - "5432:5432"
 web:
-  image: pgracio/dhis2-web:2.20-tomcat7-jre8
-  #image: pgracio/dhis2-web:2.21-tomcat7-jre8
+  #image: pgracio/dhis2-web:2.20-tomcat7-jre8
+  image: pgracio/dhis2-web:2.21-tomcat7-jre8
   environment:
     JAVA_OPTS: "-Xmx1024m -Xms4000m"
   links:
