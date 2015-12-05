@@ -20,7 +20,7 @@ cd dhis2-docker
 docker-compose up
 ```
 
-Once the container is up, open url http://127.0.0.1:8080 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
+Once the container is up, open url http://127.0.0.1:8580 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
 
 When running on Mac OS X or Windows pointing to localhost will fail. It fails because de Docker Host address is not the localhost but instead the address of boot2docker VM. Run `$ boot2docker ip` to get Docker Host address. 
 
@@ -52,19 +52,19 @@ For testing purposes I'm using AWS Free Tier. All you have to do is
 
 ```
 database:
-  image: 'postgres:9.4'
+  image: 'pgracio/dhis2-db:2.21-sierra-leone'
   environment:
     - PG_DATA=/var/lib/postgresql/data/pgdata
     - POSTGRES_DB=dhis
     - POSTGRES_PASSWORD=dhis
     - POSTGRES_USER=dhis
   volumes:
-    - '/opt/dhis2/database:/var/lib/postgresql/data'
+    - '/opt/dhis2/database/221-sierra-leone:/var/lib/postgresql/data'
 web:
   image: 'pgracio/dhis2-web:latest'
   deployment_strategy: high_availability
   environment:
-    - 'JAVA_OPTS=-Xmx1024m -Xms4000m -XX:MaxPermSize=500m -XX:PermSize=300m -XX:-UseGCOverheadLimit'
+    - 'JAVA_OPTS=-Xmx1024m -Xms4000m'
   links:
     - database
   ports:
