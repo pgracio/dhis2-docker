@@ -17,10 +17,10 @@ Start a terminal, then run:
 ```
 git clone git://github.com/pgracio/dhis2-docker.git
 cd dhis2-docker
-docker-compose up
+docker-compose up -d
 ```
 
-Once the container is up, open url http://127.0.0.1:8580 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
+Once the container is up, open url http://127.0.0.1:8085 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
 
 When running on Mac OS X or Windows pointing to localhost will fail. It fails because de Docker Host address is not the localhost but instead the address of boot2docker VM. Run `$ boot2docker ip` to get Docker Host address. 
 
@@ -71,7 +71,6 @@ web:
     - '8080'
 ```
 
-[Demo should be available, have fun :)](http://haproxy-af009260.pgracio.svc.tutum.io/)
 
 Bugs, new requests or contribution
 --------------
