@@ -74,6 +74,6 @@ web:
 
 Bugs, new requests or contribution
 --------------
-Please submit bugs, gripes and feature requests at https://github.com/pgracio/dhis2-docker/issues
+Please submit bugs and feature requests at https://github.com/pgracio/dhis2-docker/issues
 
 Any other questions contact Paulo Grácio on Twitter at @pjrgracio, email at paulo.gracio@gmail.com
