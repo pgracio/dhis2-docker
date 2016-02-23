@@ -45,8 +45,8 @@ Docker Cloud supports several providers:
 For testing purposes I'm using AWS Free Tier. All you have to do is
 
 1. [Create AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
-2. [Create Tutum Account](https://dashboard.tutum.co/accounts/register/)
-3. [Link AWS Account with Tutum](https://support.tutum.co/support/solutions/articles/5000224910)
+2. [Create Docker Cloud Account](https://cloud.docker.com/) or use your Docker ID if you already have one to access Docker Hub.
+3. [Link AWS Account with Docker Cloud](https://support.tutum.co/support/solutions/articles/5000224910)
 4. [Create a node](https://support.tutum.co/support/solutions/articles/5000523221-your-first-node)
 5. [Create and deploy stack](https://support.tutum.co/support/solutions/articles/5000569899-stacks) using the following Stack file
 
