@@ -29,13 +29,13 @@ Docker images
 Docker images can be found at [Docker Hub](https://registry.hub.docker.com/repos/pgracio/ "Docker Hub")
 
 
-Using tutum for DHIS2 containers cloud deployment
+Using Docker Cloud for DHIS2 containers cloud deployment
 -------------
-Tutum handles the orchestration of your infrastructure and application containers. The simplest DevOps you'll find without compromising on flexibility, they say...
+Docker Cloud handles the orchestration of your infrastructure and application containers. The simplest DevOps you'll find without compromising on flexibility, they say...
 
-[Tutum is free during Beta](https://dashboard.tutum.co/accounts/register/) and you will get Tutum free forever Developer plan.
+[Docker Cloud is free!](https://cloud.docker.com/).
 
-Tutum supports several providers:
+Docker Cloud supports several providers:
 
 * [Amazon Web Services](http://aws.amazon.com/ec2/pricing/)
 * [Digital Ocean](https://www.digitalocean.com/)
