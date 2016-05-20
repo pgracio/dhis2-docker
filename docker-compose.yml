@@ -1,24 +1,19 @@
-database:
-  #image: postgres:9.4
-  #image: pgracio/dhis2-db:2.20-sierra-leone
-  image: pgracio/dhis2-db:2.21-sierra-leone
-  environment:
-    POSTGRES_USER: dhis
-    POSTGRES_DB: dhis
-    POSTGRES_PASSWORD: dhis
-    PG_DATA: /var/lib/postgresql/data/pgdata
-  volumes:
-    #-  dhis-2.21-volume:/var/lib/postgresql/data
-    #-  dhis-2.20-sierra-leone-volume:/var/lib/postgresql/data
-    -  dhis-2.21-sierra-leone-volume:/var/lib/postgresql/data
-  ports:
-    - "5432:5432"
-web:
-  #image: pgracio/dhis2-web:2.20-tomcat7-jre8
-  image: pgracio/dhis2-web:latest
-  environment:
-    JAVA_OPTS: "-Xmx1024m -Xms4000m"
-  links:
-    - database
-  ports:
-    - "8085:8080"
+version: '2'
+services:
+  database:
+    container_name: dhis2-database
+    image: postgres:9.5.3
+    environment:
+      POSTGRES_USER: dhis
+      POSTGRES_DB: dhis
+      POSTGRES_PASSWORD: dhis
+      PG_DATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+  web:
+    container_name: dhis2-web
+    image: pgracio/dhis2-web:latest
+    environment:
+      JAVA_OPTS: "-Xmx1024m -Xms4000m"
+    ports:
+      - "8085:8080"
