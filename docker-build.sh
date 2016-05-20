@@ -6,7 +6,7 @@ set -e;
 function print_usage {
   me=`basename "$0"`
   echo "Usage: ./$me -v <dhis2 version>";
-  echo "Example: ./$me -v 2.20";
+  echo "Example: ./$me -v 2.23";
   exit 1;
 }
 
@@ -30,7 +30,7 @@ current_dir=`pwd`
 releases_dir="releases/$DHIS2_VERSION"
 
 if [ ! -d "$releases_dir" ]; then
-	mkdir -p $releases_dir
+    mkdir -p $releases_dir
 fi
 
 file_name=`date +dhis2-%Y%m%d.war`
@@ -44,6 +44,6 @@ cp -a "$current_dir/$releases_dir/$file_name" "$current_dir/releases/dhis2.war"
 # build new image using new dhis.war [without tag]
 image_id=$(docker build -t pgracio/dhis2-web:$DHIS2_VERSION-tomcat7-jre8 .)
 
-#docker tag -f $image_id pgracio/dhis2-web:latest
+docker tag -f $image_id pgracio/dhis2-web:latest
 
-#docker push pgracio/dhis2-web
+docker push pgracio/dhis2-web
