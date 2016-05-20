@@ -61,7 +61,7 @@ database:
   volumes:
     - '/opt/dhis2/database/221-sierra-leone:/var/lib/postgresql/data'
 web:
-  image: 'pgracio/dhis2-web:latest'
+  image: 'pgracio/dhis2-web:2.21-tomcat7-jre8'
   deployment_strategy: high_availability
   environment:
     - 'JAVA_OPTS=-Xmx1024m -Xms4000m'

@@ -1,4 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
 *.ipr
 *.iws
 *.iml
@@ -7,3 +6,4 @@ cache
 fig.yml.sample
 releases
 database/dhis2-db.sql.gz
+.DS_Store
