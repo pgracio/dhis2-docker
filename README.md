@@ -29,13 +29,13 @@ Docker images
 Docker images can be found at [Docker Hub](https://registry.hub.docker.com/repos/pgracio/ "Docker Hub")
 
 
-Using tutum for DHIS2 containers cloud deployment
+Using Docker Cloud for DHIS2 containers cloud deployment
 -------------
-Tutum handles the orchestration of your infrastructure and application containers. The simplest DevOps you'll find without compromising on flexibility, they say...
+Docker Cloud handles the orchestration of your infrastructure and application containers. The simplest DevOps you'll find without compromising on flexibility, they say...
 
-[Tutum is free during Beta](https://dashboard.tutum.co/accounts/register/) and you will get Tutum free forever Developer plan.
+[Docker Cloud is free!](https://cloud.docker.com/).
 
-Tutum supports several providers:
+Docker Cloud supports several providers:
 
 * [Amazon Web Services](http://aws.amazon.com/ec2/pricing/)
 * [Digital Ocean](https://www.digitalocean.com/)
@@ -45,8 +45,8 @@ Tutum supports several providers:
 For testing purposes I'm using AWS Free Tier. All you have to do is
 
 1. [Create AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)
-2. [Create Tutum Account](https://dashboard.tutum.co/accounts/register/)
-3. [Link AWS Account with Tutum](https://support.tutum.co/support/solutions/articles/5000224910)
+2. [Create Docker Cloud Account](https://cloud.docker.com/) or use your Docker ID if you already have one to access Docker Hub.
+3. [Link AWS Account with Docker Cloud](https://support.tutum.co/support/solutions/articles/5000224910)
 4. [Create a node](https://support.tutum.co/support/solutions/articles/5000523221-your-first-node)
 5. [Create and deploy stack](https://support.tutum.co/support/solutions/articles/5000569899-stacks) using the following Stack file
 
@@ -74,6 +74,6 @@ web:
 
 Bugs, new requests or contribution
 --------------
-Please submit bugs, gripes and feature requests at https://github.com/pgracio/dhis2-docker/issues
+Please submit bugs and feature requests at https://github.com/pgracio/dhis2-docker/issues
 
 Any other questions contact Paulo Grácio on Twitter at @pjrgracio, email at paulo.gracio@gmail.com
