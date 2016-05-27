@@ -2,7 +2,7 @@ version: '2'
 services:
   database:
     container_name: dhis2-database
-    image: pgracio/dhis2-db:2.23-training
+    image: pgracio/dhis2-db:training
     environment:
       POSTGRES_USER: dhis
       POSTGRES_DB: dhis
@@ -12,7 +12,7 @@ services:
       - "5432:5432"
   web:
     container_name: dhis2-web
-    image: pgracio/dhis2-web:latest
+    image: pgracio/dhis2-web:2.23-tomcat7-jre8
     environment:
       JAVA_OPTS: "-Xmx1024m -Xms4000m"
     ports:
