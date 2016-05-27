@@ -2,7 +2,7 @@ version: '2'
 services:
   database:
     container_name: dhis2-database
-    image: postgres:9.5.3
+    image: pgracio/dhis2-db:2.23-training
     environment:
       POSTGRES_USER: dhis
       POSTGRES_DB: dhis
