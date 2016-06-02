@@ -17,3 +17,7 @@ services:
       JAVA_OPTS: "-Xmx1024m -Xms4000m"
     ports:
       - "8085:8080"
+    depends_on:
+      - database
+    entrypoint: ./wait-for-it.sh -t 0 database:5432 --
+    command: catalina.sh run # https://github.com/docker/compose/issues/3140
