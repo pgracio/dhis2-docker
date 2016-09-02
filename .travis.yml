@@ -3,4 +3,5 @@ services:
   - docker
 
 script: 
-  - ./docker-build.sh -v 2.24
+  - docker-compose --version
+  #- ./docker-build.sh -v 2.24
