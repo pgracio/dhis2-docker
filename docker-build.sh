@@ -41,9 +41,9 @@ wget -O "$current_dir/$releases_dir/$file_name" "https://www.dhis2.org/download/
 
 cp -a "$current_dir/$releases_dir/$file_name" "$current_dir/releases/dhis2.war"
 
-# build new image using new dhis.war [without tag]
-image_id=$(docker build -t pgracio/dhis2-web:$DHIS2_VERSION-tomcat7-jre8 .)
+# build new image using new dhis.war 
+image_id=$(docker build -t dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8 .)
 
-docker tag -f $image_id pgracio/dhis2-web:latest
+#docker tag -f $image_id pgracio/dhis2-web:latest
 
-docker push pgracio/dhis2-web
+docker push dhis2/dhis2-web
