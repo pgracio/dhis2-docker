@@ -1,6 +1,6 @@
 #! /bin/bash
 
-set -x;
+set -e;
 
 # On failure: print usage and exit with 1
 function print_usage {
@@ -48,5 +48,5 @@ image_id=$(docker build -q -t dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-$dt .)
 echo "Image id: $image_id"
 docker tag $image_id dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-latest
 
-docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 docker push dhis2/dhis2-web
