@@ -48,4 +48,5 @@ image_id=$(docker build -q -t dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-$dt .)
 echo "Image id: $image_id"
 docker tag $image_id dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-latest
 
+docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 docker push dhis2/dhis2-web
