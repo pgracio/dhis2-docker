@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pgracio/dhis2-docker.svg?branch=master)](https://travis-ci.org/pgracio/dhis2-docker)
+
 dhis2-docker
 ==============
 
