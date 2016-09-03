@@ -34,7 +34,7 @@ if [ ! -d "$releases_dir" ]; then
 fi
 
 file_name=`date +dhis2-%Y%m%d.war`
-dt=`date '+%Y%m%d-%H%M%S'`
+dt=`date '+%Y%m%d'`
 
 rm -f $current_dir/releases/dhis2.war
 
