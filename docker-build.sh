@@ -46,6 +46,6 @@ cp -a "$current_dir/$releases_dir/$file_name" "$current_dir/releases/dhis2.war"
 image_id=$(docker build -q -t dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-$dt .)
 
 echo "Image id: $image_id"
-#docker tag -f $image_id pgracio/dhis2-web:latest
+docker tag -f $image_id dhis2/dhis2-web:$DHIS2_VERSION-tomcat7-jre8-latest
 
-#docker push dhis2/dhis2-web
+docker push dhis2/dhis2-web
