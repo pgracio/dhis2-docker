@@ -54,7 +54,7 @@ For testing purposes I'm using AWS Free Tier. All you have to do is
 
 ```
 database:
-  image: 'pgracio/dhis2-db:2.21-sierra-leone'
+  image: 'pgracio/dhis2-db:2.25-sierra-leone'
   environment:
     - PG_DATA=/var/lib/postgresql/data/pgdata
     - POSTGRES_DB=dhis
@@ -63,7 +63,7 @@ database:
   volumes:
     - '/opt/dhis2/database/221-sierra-leone:/var/lib/postgresql/data'
 web:
-  image: 'pgracio/dhis2-web:2.21-tomcat7-jre8'
+  image: 'dhis2/dhis2-web:2.25-tomcat7-jre8-latest'
   deployment_strategy: high_availability
   environment:
     - 'JAVA_OPTS=-Xmx1024m -Xms4000m'
