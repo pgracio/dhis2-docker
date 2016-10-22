@@ -29,7 +29,7 @@ validate_parameters
 
 VERSION_TMP=${DHIS2_VERSION//[-._]/}
 
-rm -rf dhis2-db.sql.gz
+#rm -rf dhis2-db.sql.gz
 
-curl -L -o dhis2-db.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/$DATA_SET/$VERSION_TMP/dhis2-db-$DATA_SET.sql.gz?raw=true
+#curl -L -o dhis2-db.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/$DATA_SET/$VERSION_TMP/dhis2-db-$DATA_SET.sql.gz?raw=true
 docker build -t pgracio/dhis2-db:$DHIS2_VERSION-$DATA_SET .
