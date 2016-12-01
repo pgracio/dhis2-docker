@@ -1,4 +1,4 @@
-FROM postgres:9.5
+FROM mdillon/postgis:9.5
 
 ADD dhis2-db.sql.gz /tmp/data/dhis2-db.sql.gz
 ADD init-dhis2-db.sh /docker-entrypoint-initdb.d/
