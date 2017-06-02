@@ -4,6 +4,7 @@ services:
 
 script:
   - ./docker-build.sh -v trunk
+  - ./docker-build.sh -v 2.27
   - ./docker-build.sh -v 2.26
   - ./docker-build.sh -v 2.25
   - ./docker-build.sh -v 2.24
