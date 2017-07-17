@@ -28,7 +28,7 @@ When running on Mac OS X or Windows pointing to localhost will fail. It fails be
 
 Docker images
 --------------
-Docker images can be found at [Docker Hub](https://registry.hub.docker.com/repos/pgracio/ "Docker Hub")
+Docker images can be found at [Docker Hub](https://hub.docker.com/u/pgracio/ "Docker Hub")
 
 
 Using Docker Cloud for DHIS2 containers cloud deployment
