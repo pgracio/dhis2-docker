@@ -23,7 +23,7 @@ docker-compose up -d
 or
 
 ```
-docker-compose -f docker-compose-empty-dd.yml up -d
+docker-compose -f docker-compose-empty-db.yml up -d
 ```
 
 Once the container is up, open url http://127.0.0.1:8085 and connect using usernmame `admin` and password `district` as explained in the [dhis2 documentation](https://www.dhis2.org/doc/snapshot/en/user/html/ch02.html#d5e283)
