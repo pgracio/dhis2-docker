@@ -34,7 +34,7 @@ function fetch_data {
   rm -rf dhis2-db.sql.gz
 
   if [ $DATA_SET == "sierra-leone" ]; then
-    curl -L -o dhis2-db.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/$DATA_SET/$VERSION_TMP/dhis2-db-$DATA_SET.sql.gz?raw=true
+    curl -L -o dhis2-db.sql.gz https://github.com/dhis2/dhis2-demo-db/blob/master/$DATA_SET/$DHIS2_VERSION/dhis2-db-$DATA_SET.sql.gz?raw=true
   elif [ $DATA_SET == "trainingland" ]; then
     curl -L -o dhis2-db.sql.gz https://github.com/dhis2/dhis2-demo-db/raw/master/trainingland/trainingland.sql.gz?raw=true
   elif [ $DATA_SET == "world-adoption" ]; then
