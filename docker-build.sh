@@ -38,7 +38,7 @@ dt=`date '+%Y%m%d'`
 
 rm -f $current_dir/releases/dhis2.war
 
-wget -O "$current_dir/$releases_dir/$file_name" "https://www.dhis2.org/download/releases/$DHIS2_VERSION/dhis.war"
+wget -O "$current_dir/$releases_dir/$file_name" "https://s3-eu-west-1.amazonaws.com/releases.dhis2.org/$DHIS2_VERSION/dhis.war"
 
 cp -a "$current_dir/$releases_dir/$file_name" "$current_dir/releases/dhis2.war"
 
