@@ -2,7 +2,7 @@ version: '2'
 services:
   database:
     container_name: dhis2-database
-    image: pgracio/dhis2-db:2.29-sierra-leone
+    image: pgracio/dhis2-db:2.30-sierra-leone
     environment:
       POSTGRES_USER: dhis
       POSTGRES_DB: dhis
@@ -13,7 +13,7 @@ services:
      - "5432:5432"
   web:
     container_name: dhis2-web
-    image: dhis2/dhis2-web:2.29-tomcat7-jre8-latest
+    image: dhis2/dhis2-web:2.30-tomcat7-jre8-latest
     environment:
       JAVA_OPTS: "-Xmx1024m -Xms4000m"
       POSTGRES_DB: dhis
